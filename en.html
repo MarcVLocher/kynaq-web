@@ -1,201 +1,185 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2575.7">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KYNAQ</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg-color: #FFFFFF;
+            --text-color: #000000;
+            --font-headings: 'Libre Caslon Display', serif;
+            --font-body: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: var(--font-body);
+            font-size: 18px;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            text-rendering: optimizeLegibility;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 60px 20px 100px 20px;
+        }
+
+        nav.language-switcher {
+            text-align: right;
+            margin-bottom: 80px;
+            font-size: 14px;
+            letter-spacing: 0.05em;
+        }
+
+        nav.language-switcher a {
+            color: var(--text-color);
+            text-decoration: none;
+            margin-left: 10px;
+            padding-bottom: 2px;
+        }
+
+        nav.language-switcher a.active {
+            border-bottom: 1px solid var(--text-color);
+            pointer-events: none;
+        }
+
+        h1, h2, h3 {
+            font-family: var(--font-headings);
+            font-weight: 400;
+            margin-top: 60px;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 48px;
+            margin-top: 0;
+            margin-bottom: 10px;
+            letter-spacing: 0.02em;
+        }
+
+        .claim {
+            font-family: var(--font-body);
+            font-size: 20px;
+            font-weight: 300;
+            margin-bottom: 80px;
+        }
+
+        h2 {
+            font-size: 24px;
+            border-bottom: 1px solid #eaeaea;
+            padding-bottom: 10px;
+        }
+
+        h3 {
+            font-size: 18px;
+            margin-top: 40px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            margin-bottom: 24px;
+        }
+
+        .stealth-note {
+            font-style: italic;
+            color: #444;
+        }
+
+        a {
+            color: var(--text-color);
+            text-decoration: underline;
+            text-decoration-thickness: 1px;
+            text-underline-offset: 3px;
+        }
+
+        a:hover {
+            background-color: var(--text-color);
+            color: var(--bg-color);
+            text-decoration: none;
+        }
+
+        footer {
+            margin-top: 100px;
+            padding-top: 40px;
+            border-top: 2px solid var(--text-color);
+            font-size: 14px;
+        }
+
+        footer p {
+            margin-bottom: 16px;
+        }
+    </style>
 </head>
 <body>
-<p class="p1">&lt;!DOCTYPE html&gt;</p>
-<p class="p1">&lt;html lang="en"&gt;</p>
-<p class="p1">&lt;head&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta charset="UTF-8"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;title&gt;KYNAQ&lt;/title&gt;</p>
-<p class="p2"><span class="Apple-converted-space">    </span></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;link rel="preconnect" href="https://fonts.googleapis.com"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;link rel="preconnect" href="https://fonts.gstatic.com" crossorigin&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&amp;display=swap" rel="stylesheet"&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;style&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>:root {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>--bg-color: #FFFFFF;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>--text-color: #000000;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>--font-headings: 'Libre Caslon Display', serif;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>--font-body: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>body {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>background-color: var(--bg-color);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>color: var(--text-color);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-family: var(--font-body);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-size: 18px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>line-height: 1.6;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin: 0;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>padding: 0;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>text-rendering: optimizeLegibility;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>-webkit-font-smoothing: antialiased;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>.container {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>max-width: 720px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin: 0 auto;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>padding: 60px 20px 100px 20px;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>nav.language-switcher {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>text-align: right;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 80px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-size: 14px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>letter-spacing: 0.05em;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>nav.language-switcher a {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>color: var(--text-color);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>text-decoration: none;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin-left: 10px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>padding-bottom: 2px;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>nav.language-switcher a.active {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>border-bottom: 1px solid var(--text-color);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>pointer-events: none;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>h1, h2, h3 {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-family: var(--font-headings);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-weight: 400;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin-top: 60px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 20px;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>h1 {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-size: 48px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin-top: 0;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 10px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>letter-spacing: 0.02em;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>.claim {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-family: var(--font-body);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-size: 20px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-weight: 300;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 80px;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>h2 {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-size: 24px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>border-bottom: 1px solid #eaeaea;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>padding-bottom: 10px;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>h3 {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-size: 18px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin-top: 40px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 10px;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>p {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 24px;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>.stealth-note {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-style: italic;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>color: #444;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>a {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>color: var(--text-color);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>text-decoration: underline;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>text-decoration-thickness: 1px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>text-underline-offset: 3px;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>a:hover {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>background-color: var(--text-color);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>color: var(--bg-color);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>text-decoration: none;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>footer {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin-top: 100px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>padding-top: 40px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>border-top: 2px solid var(--text-color);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-size: 14px;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>footer p {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 16px;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/style&gt;</p>
-<p class="p1">&lt;/head&gt;</p>
-<p class="p1">&lt;body&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="container"&gt;</p>
-<p class="p2"><span class="Apple-converted-space">        </span></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;nav class="language-switcher"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;a href="index.html"&gt;D&lt;/a&gt; | &lt;a href="#" class="active"&gt;E&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/nav&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;header&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;h1&gt;KYNAQ&lt;/h1&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;p class="claim"&gt;Because humans cannot imagine the unimaginable.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/header&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;main&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;section&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;h2&gt;Why.&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;p&gt;The physical world is chaotic and stochastic. Yet, the protection of critical infrastructure relies on human heuristics and static steel. The attacker dictates the time, location, and method. Targeted acts of sabotage and European critical infrastructure legislation force action. Passive walls are no longer sufficient. Material reality demands an active, deterministic defence.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;section&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;h2&gt;For whom.&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;p&gt;We defend European infrastructure. The system protects operators of critical facilities, data centres, banks, and luxury brands. We do not sell hardware. We license a recurring, autonomous intelligence.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;section&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;h2&gt;Reasoning.&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;p&gt;Kynaq starts from scratch (tabula rasa). We reject historical breach data as flawed and asymmetrical. The machine constructs a high-dimensional world model of physical reality. Autonomous agents train within it through continuous self-play and contingent reinforcement learning. They simulate attackers and defenders millions of times, discovering vectors beyond human imagination. The architecture strictly subordinates economic preservation (Value) to absolute physical security (Policy).&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;p class="stealth-note"&gt;Publications by the LAB_2306 AG research unit are strictly confidential.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;section&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;h2&gt;About.&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;p&gt;Kynaq builds the first autonomous immune system for the real world. The greatest hurdle for artificial intelligence is the transfer from digital simulation to flawed kinetics (the sim-to-real gap). We close this gap through radical empirical calibration. The operational FRAM Liner Deutschland GmbH executes destruction tests on real facilities, dictated by the machine. The isolated LAB_2306 AG develops the algorithms. The resulting data monopoly is unassailable.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;section&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;h2&gt;Jobs.&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;p&gt;We recruit capable developers for algorithmic post-training. The task is to overcome the epistemic boundary between stochastic simulation and irreversible physical destruction. Send applications, including repository access, to: &lt;a href="mailto:talent@kynaq.ch"&gt;talent@kynaq.ch&lt;/a&gt;.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/section&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/main&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;footer&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;h3&gt;Contact &amp; Imprint&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>Kynaq AG (i.G.)&lt;br&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>Kantonsstrasse 14&lt;br&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>8807 Freienbach&lt;br&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>Switzerland&lt;br&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;a href="mailto:research@kynaq.ch"&gt;research@kynaq.ch&lt;/a&gt; | +41 79 930 03 28</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/p&gt;</p>
-<p class="p2"><span class="Apple-converted-space">            </span></p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;h3&gt;Legal Notice&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;p&gt;Kynaq AG is formally in the process of incorporation (i.G.). Registration in the Swiss Commercial Register has not yet been completed. All research results, algorithms, and proprietary data are fully subject to copyright.&lt;/p&gt;</p>
-<p class="p2"><span class="Apple-converted-space">            </span></p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;h3&gt;Privacy Policy&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;p&gt;This website serves exclusively to provide essential corporate information. We do not use tracking software, analysis tools, or marketing cookies. No personal data of visitors is collected, stored, or processed. Communication via email is subject to legal and corporate confidentiality.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/footer&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;/body&gt;</p>
-<p class="p1">&lt;/html&gt;</p>
+
+    <div class="container">
+        
+        <nav class="language-switcher">
+            <a href="index.html">D</a> | <a href="#" class="active">E</a>
+        </nav>
+
+        <header>
+            <h1>KYNAQ</h1>
+            <p class="claim">Because humans cannot imagine the unimaginable.</p>
+        </header>
+
+        <main>
+            <section>
+                <h2>Why.</h2>
+                <p>The physical world is chaotic and stochastic. Yet, the protection of critical infrastructure relies on human heuristics and static steel. The attacker dictates the time, location, and method. Targeted acts of sabotage and European critical infrastructure legislation force action. Passive walls are no longer sufficient. Material reality demands an active, deterministic defence.</p>
+            </section>
+
+            <section>
+                <h2>For whom.</h2>
+                <p>We defend European infrastructure. The system protects operators of critical facilities, data centres, banks, and luxury brands. We do not sell hardware. We license a recurring, autonomous intelligence.</p>
+            </section>
+
+            <section>
+                <h2>Reasoning.</h2>
+                <p>Kynaq starts from scratch (tabula rasa). We reject historical breach data as flawed and asymmetrical. The machine constructs a high-dimensional world model of physical reality. Autonomous agents train within it through continuous self-play and contingent reinforcement learning. They simulate attackers and defenders millions of times, discovering vectors beyond human imagination. The architecture strictly subordinates economic preservation (Value) to absolute physical security (Policy).</p>
+                <p class="stealth-note">Publications by the LAB_2306 AG research unit are strictly confidential.</p>
+            </section>
+
+            <section>
+                <h2>About.</h2>
+                <p>Kynaq builds the first autonomous immune system for the real world. The greatest hurdle for artificial intelligence is the transfer from digital simulation to flawed kinetics (the sim-to-real gap). We close this gap through radical empirical calibration. The operational FRAM Liner Deutschland GmbH executes destruction tests on real facilities, dictated by the machine. The isolated LAB_2306 AG develops the algorithms. The resulting data monopoly is unassailable.</p>
+            </section>
+
+            <section>
+                <h2>Jobs.</h2>
+                <p>We recruit capable developers for algorithmic post-training. The task is to overcome the epistemic boundary between stochastic simulation and irreversible physical destruction. Send applications, including repository access, to: <a href="mailto:talent@kynaq.ch">talent@kynaq.ch</a>.</p>
+            </section>
+        </main>
+
+        <footer>
+            <h3>Contact & Imprint</h3>
+            <p>
+                Kynaq AG (i.G.)<br>
+                Kantonsstrasse 14<br>
+                8807 Freienbach<br>
+                Switzerland<br>
+                <a href="mailto:research@kynaq.ch">research@kynaq.ch</a> | +41 79 930 03 28
+            </p>
+            
+            <h3>Legal Notice</h3>
+            <p>Kynaq AG is formally in the process of incorporation (i.G.). Registration in the Swiss Commercial Register has not yet been completed. All research results, algorithms, and proprietary data are fully subject to copyright.</p>
+            
+            <h3>Privacy Policy</h3>
+            <p>This website serves exclusively to provide essential corporate information. We do not use tracking software, analysis tools, or marketing cookies. No personal data of visitors is collected, stored, or processed. Communication via email is subject to legal and corporate confidentiality.</p>
+        </footer>
+
+    </div>
+
 </body>
 </html>
