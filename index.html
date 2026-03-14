@@ -5,25 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KYNAQ</title>
     
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&display=swap" rel="stylesheet">
-
     <style>
-        /* CSS Basis-Variablen für radikale Reduktion */
+        /* CSS Basis-Variablen für radikale Reduktion und neue Farben */
         :root {
             --bg-color: #FFFFFF;
-            --text-color: #000000;
-            --font-headings: 'Libre Caslon Display', serif;
-            --font-body: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+            --text-main: #000000;
+            --color-tungsten: #2E3033; /* Schweres, kaltes Grau */
+            --color-oxblood: #6F0F0F;  /* Tiefes, dunkles Rot */
+            --font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
         }
 
         body {
             background-color: var(--bg-color);
-            color: var(--text-color);
-            font-family: var(--font-body);
+            color: var(--text-main);
+            font-family: var(--font-stack);
             font-size: 18px;
-            line-height: 1.6;
+            line-height: 1.5; /* Leicht enger, wie gewünscht */
             margin: 0;
             padding: 0;
             text-rendering: optimizeLegibility;
@@ -39,90 +36,130 @@
         /* Sprachmenü - Minimalistisch oben rechts */
         nav.language-switcher {
             text-align: right;
-            margin-bottom: 80px;
+            margin-bottom: 60px;
             font-size: 14px;
+            font-weight: 600;
             letter-spacing: 0.05em;
         }
 
         nav.language-switcher a {
-            color: var(--text-color);
+            color: var(--text-main);
             text-decoration: none;
             margin-left: 10px;
             padding-bottom: 2px;
         }
 
         nav.language-switcher a.active {
-            border-bottom: 1px solid var(--text-color);
+            border-bottom: 2px solid var(--color-oxblood);
             pointer-events: none;
         }
 
-        /* Typografie */
-        h1, h2, h3 {
-            font-family: var(--font-headings);
-            font-weight: 400;
-            margin-top: 60px;
-            margin-bottom: 20px;
+        /* Typografie: Unapologetic und Bold */
+        header {
+            margin-bottom: 70px;
         }
 
         h1 {
-            font-size: 84px;
-            font-weight: bold;
+            font-size: 88px; /* Prominent, massiv */
+            font-weight: 900;
+            letter-spacing: -0.03em;
             margin-top: 0;
-            margin-bottom: 10px;
-            letter-spacing: 0.02em;
+            margin-bottom: 5px;
+            color: var(--text-main);
         }
 
         .claim {
-            font-family: var(--font-body);
-            font-size: 20px;
-            font-weight: 300;
-            margin-bottom: 80px;
+            font-size: 26px; /* Harmonisch mitwachsend */
+            font-weight: 700;
+            color: var(--color-tungsten);
+            margin-top: 0;
+            letter-spacing: -0.01em;
+        }
+
+        /* Menüpunkte / Sektionen */
+        section {
+            margin-bottom: 50px; /* Enger gesteckt, damit es nicht auseinanderfällt */
         }
 
         h2 {
-            font-size: 24px;
-            border-bottom: 1px solid #eaeaea;
-            padding-bottom: 10px;
-        }
-
-        h3 {
-            font-size: 18px;
-            margin-top: 40px;
-            margin-bottom: 10px;
+            font-size: 18px; /* Gleiche Grösse wie Text, aber extrem markant */
+            font-weight: 800;
+            color: var(--color-tungsten);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            border-bottom: 3px solid var(--color-oxblood); /* Starke, farbige Linie */
+            padding-bottom: 6px;
+            margin-bottom: 16px;
         }
 
         p {
-            margin-bottom: 24px;
+            margin-top: 0;
+            margin-bottom: 0;
+            color: var(--text-main);
+            text-align: justify; /* Für perfekte Block-Harmonie, optional */
         }
 
+        /* Stealth Note Styling */
         .stealth-note {
-            font-style: italic;
-            color: #444;
+            font-weight: 600;
+            color: var(--color-tungsten);
         }
 
         a {
-            color: var(--text-color);
+            color: var(--text-main);
+            font-weight: 600;
             text-decoration: underline;
-            text-decoration-thickness: 1px;
+            text-decoration-thickness: 2px;
             text-underline-offset: 3px;
         }
 
         a:hover {
-            background-color: var(--text-color);
-            color: var(--bg-color);
-            text-decoration: none;
+            color: var(--color-oxblood);
         }
 
-        /* Footer / Impressum */
+        /* Footer & Akkordeon (Aufklapp-Texte) */
         footer {
-            margin-top: 100px;
-            padding-top: 40px;
-            border-top: 2px solid var(--text-color);
-            font-size: 14px;
+            margin-top: 80px;
         }
 
-        footer p {
+        .contact-line {
+            font-size: 18px;
+            font-weight: 800;
+            color: var(--color-tungsten);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            border-bottom: 3px solid var(--color-oxblood);
+            padding-bottom: 6px;
+            margin-bottom: 30px;
+        }
+
+        details {
             margin-bottom: 16px;
+        }
+
+        summary {
+            font-size: 18px;
+            font-weight: 800;
+            color: var(--color-tungsten);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            cursor: pointer;
+            list-style: none; /* Entfernt den Standard-Pfeil in einigen Browsern */
+        }
+
+        summary::-webkit-details-marker {
+            display: none; /* Entfernt den Pfeil in Safari/Chrome */
+        }
+
+        summary:hover {
+            color: var(--color-oxblood);
+        }
+
+        details p {
+            margin-top: 12px;
+            font-size: 15px;
+            color: var(--color-tungsten);
+            text-align: left;
         }
     </style>
 </head>
@@ -141,47 +178,45 @@
 
         <main>
             <section>
-                <h2>Warum.</h2>
-                <p>Die physische Welt ist chaotisch und stochastisch. Der Schutz kritischer Infrastruktur basiert jedoch auf menschlichen Heuristiken und statischem Stahl. Der Angreifer diktiert Zeit, Ort und Mittel. Gezielte Sabotageakte und das europäische KRITIS-Dachgesetz zwingen zum Handeln. Passive Mauern genügen nicht mehr. Die materielle Realität erfordert eine aktive, deterministische Verteidigung.</p>
+                <h2>CONTEXT</h2>
+                <p>Die Bedrohung kritischer Infrastruktur entspringt der menschlichen Psychologie des Aggressors – angetrieben von Motiven, zunehmend skaliert durch maligne KI-Agenten. Europäische Anlagen basieren auf passivem Stahl. Sie reagieren erst, wenn der physische Einbruch stattfindet. Diese statische Asymmetrie ist in einer volatilen Welt ein unkalkulierbares Risiko. Die Realität erzwingt deterministische Antizipation.</p>
             </section>
 
             <section>
-                <h2>Für wen.</h2>
-                <p>Wir verteidigen europäische Infrastruktur. Das System schützt Betreiber von KRITIS-Anlagen, Rechenzentren, Banken und Luxusmarken. Wir verkaufen keine Hardware. Wir lizenzieren eine wiederkehrende, autonome Intelligenz.</p>
+                <h2>PREMISE</h2>
+                <p>Biologie ist unendlich komplex, doch die Physik offenbart ihre reine Schönheit durch berechenbare Axiome und Gesetze (Sutskever). Kynaq nutzt diese maschinenlesbare Berechenbarkeit. Durch kompromissloses Deep Learning konstruieren wir ein hochdimensionales Weltmodell der materiellen Architektur. Die Maschine lernt die reine Physik der Kinetik und ignoriert menschliche Annahmen vollständig.</p>
             </section>
 
             <section>
-                <h2>Reasoning.</h2>
-                <p>Kynaq beginnt bei null (Tabula Rasa). Wir verwerfen historische Einbruchsdaten als fehlerhaft und asymmetrisch. Die Maschine konstruiert ein hochdimensionales Weltmodell der physischen Realität. Autonome Agenten trainieren darin durch ununterbrochenes Selfplay und Contingent Reinforcement Learning. Sie simulieren Angreifer und Verteidiger millionenfach und entdecken Vektoren jenseits der menschlichen Vorstellungskraft. Die Architektur ordnet den ökonomischen Erhalt (Value) zwingend der absoluten physischen Sicherheit (Policy) unter.</p>
-                <p class="stealth-note">Publikationen der Forschungseinheit LAB_2306 AG unterliegen strikter Geheimhaltung.</p>
+                <h2>ARCHITECTURE</h2>
+                <p>Autonome Agenten trainieren innerhalb dieses Weltmodells durch ununterbrochenes Selfplay und Machine Learning. Sie simulieren den Täter millionenfach, berechnen Fluchtwege und entdecken Angriffsvektoren jenseits der menschlichen Vorstellungskraft. Die Algorithmen determinieren ihre eigenen Gewichte. Die mathematische Zielfunktion ordnet den ökonomischen Erhalt (Value) dabei zwingend der absoluten physischen Integrität (Policy) unter.</p>
             </section>
 
             <section>
-                <h2>About.</h2>
-                <p>Kynaq baut das erste autonome Immunsystem für die reale Welt. Die grösste Hürde der künstlichen Intelligenz ist der Transfer aus der digitalen Simulation in die fehlerbehaftete Kinetik (Sim-to-Real Gap). Wir schliessen diese Lücke durch radikale empirische Kalibrierung. Die operative FRAM Liner Deutschland GmbH führt von der Maschine diktierte Zerstörungstests an realen Testanlagen aus. Die isolierte LAB_2306 AG entwickelt die Algorithmen. Das resultierende Datenmonopol ist uneinholbar.</p>
+                <h2>VALIDATION</h2>
+                <p>Die grösste technologische Hürde ist die Sim-to-Real Gap. Wir schliessen diese durch rohe empirische Kalibrierung: Die Intelligenz diktiert reale Zerstörungstests an isolierten Testanlagen. <span class="stealth-note">Laufende akademische Publikationen werden exklusiv unter der Rubrik „Projekt | LAB_2306 AG“ veröffentlicht. Die operative Kynaq AG operiert kompromisslos im Stealth-Modus.</span></p>
             </section>
 
             <section>
-                <h2>Jobs.</h2>
-                <p>Wir rekrutieren fähige Entwickler für das algorithmische Post-Training. Die Aufgabe ist die Überwindung der epistemischen Grenze zwischen stochastischer Simulation und irreversibler physischer Zerstörung. Bewerbungen inklusive Repository-Zugang an: <a href="mailto:talent@kynaq.ch">talent@kynaq.ch</a>.</p>
+                <h2>TALENT</h2>
+                <p>Wir rekrutieren exzellente Entwickler für das algorithmische Post-Training. Die Aufgabe besteht in der Überwindung der epistemischen Grenze zwischen der Simulation im Weltmodell und der irreversiblen, physischen Zerstörung in der Realität. Bewerbungen, inklusive vollständigem Repository-Zugang, richten Sie bei akademischer Eignung direkt an unsere Forschungseinheit: <a href="mailto:talent@kynaq.ch">talent@kynaq.ch</a>.</p>
             </section>
         </main>
 
         <footer>
-            <h3>Kontakt & Impressum</h3>
-            <p>
-                Kynaq AG (i.G.)<br>
-                Kantonsstrasse 14<br>
-                8807 Freienbach<br>
-                Schweiz<br>
-                <a href="mailto:research@kynaq.ch">research@kynaq.ch</a> | +41 79 930 03 28
-            </p>
-            
-            <h3>Rechtliche Hinweise</h3>
-            <p>Die Kynaq AG befindet sich formaljuristisch in Gründung (i.G.). Die Eintragung in das Schweizer Handelsregister ist noch nicht vollzogen. Sämtliche Forschungsergebnisse, Algorithmen und proprietären Daten unterliegen dem vollumfänglichen Urheberrecht.</p>
-            
-            <h3>Datenschutz</h3>
-            <p>Diese Webseite dient ausschliesslich der Bereitstellung essenzieller Unternehmensinformationen. Wir verzichten auf den Einsatz von Tracking-Software, Analyse-Tools oder Marketing-Cookies. Es werden keine personenbezogenen Daten von Besuchern erhoben, gespeichert oder verarbeitet. Die Kommunikation via E-Mail unterliegt der anwaltlichen und unternehmerischen Vertraulichkeit.</p>
+            <div class="contact-line">
+                Kynaq AG (i.G.) | Kantonsstrasse 14 | 8807 Freienbach | Switzerland
+            </div>
+
+            <details>
+                <summary>Rechtliche Hinweise +</summary>
+                <p>Die Kynaq AG befindet sich formaljuristisch in Gründung (i.G.). Die Eintragung in das Schweizer Handelsregister ist noch nicht vollzogen. Sämtliche Forschungsergebnisse, Algorithmen und proprietären Daten unterliegen dem vollumfänglichen Urheberrecht.</p>
+            </details>
+
+            <details>
+                <summary>Datenschutz +</summary>
+                <p>Diese Webseite dient ausschliesslich der Bereitstellung essenzieller Informationen. Wir verzichten radikal auf den Einsatz von Tracking-Software, Analyse-Tools oder Marketing-Cookies. Es werden keine personenbezogenen Daten von Besuchern erhoben oder verarbeitet. Die Kommunikation unterliegt der anwaltlichen Vertraulichkeit.</p>
+            </details>
         </footer>
 
     </div>
