@@ -21,23 +21,49 @@
             padding: 0;
             display: flex;
             justify-content: center;
+            position: relative;
+        }
+
+        /* The language switch: Minimalist, fixed top right */
+        .lang-switch {
+            position: absolute;
+            top: 30px;
+            right: 40px;
+            font-size: 14px;
+            letter-spacing: 1px;
+        }
+
+        .lang-switch a {
+            color: #999999; /* Inactive language fades into the background */
+            text-decoration: none;
+            margin: 0 5px;
+            transition: color 0.3s ease;
+        }
+
+        .lang-switch a.active {
+            color: #000000; /* Active language is hard black */
+            font-weight: 600;
+        }
+
+        .lang-switch a:hover {
+            color: #000000;
         }
 
         /* The container: limits line length for perfect reading flow */
         .container {
             max-width: 720px;
-            padding: 100px 20px;
+            padding: 120px 20px 100px 20px;
             width: 100%;
         }
 
-        /* The title: physical weight and academic rigor */
+        /* The title: Escalated to 88px, massive and heavy */
         h1 {
-            font-family: 'Libre Caslon Display', Garamond, 'Palatino Linotype', serif;
-            font-size: 64px;
-            font-weight: normal;
+            font-family: 'Libre Caslon Display', 'Bodoni MT', 'Palatino Linotype', Georgia, serif;
+            font-size: 88px;
+            font-weight: bold;
             text-align: center;
             letter-spacing: 2px;
-            margin: 0 0 15px 0;
+            margin: 0 0 10px 0;
         }
 
         /* The claim: isolated and centered */
@@ -87,18 +113,16 @@
             font-size: 14px;
             font-weight: 600;
             cursor: pointer;
-            list-style: none; /* Removes the default arrow */
+            list-style: none; 
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
 
-        /* Removes the default arrow in Safari/Webkit */
         summary::-webkit-details-marker {
             display: none;
         }
 
-        /* The text inside the expandable area */
         .details-content {
             font-size: 14px;
             margin-top: 10px;
@@ -107,6 +131,10 @@
     </style>
 </head>
 <body>
+
+    <div class="lang-switch">
+        <a href="index.html">DE</a> | <a href="index_en.html" class="active">EN</a>
+    </div>
 
     <div class="container">
         
