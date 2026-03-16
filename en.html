@@ -5,155 +5,104 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KYNAQ</title>
     
-    <style>
-        /* CSS Base Variables for Radical Reduction and Academic Tonalities */
-        :root {
-            --bg-color: #FFFFFF;
-            --text-main: #000000;
-            --color-tungsten: #2E3033; /* Heavy, cold grey representing physics */
-            --color-oxblood: #6F0F0F;  /* Deep red representing biological aggression */
-            --font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-        }
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&display=swap" rel="stylesheet">
 
+    <style>
+        /* The foundation: absolute reduction to black and white */
         body {
-            background-color: var(--bg-color);
-            color: var(--text-main);
-            font-family: var(--font-stack);
+            background-color: #ffffff;
+            color: #000000;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
             font-size: 18px;
-            line-height: 1.5;
+            line-height: 1.6;
             margin: 0;
             padding: 0;
-            text-rendering: optimizeLegibility;
-            -webkit-font-smoothing: antialiased;
+            display: flex;
+            justify-content: center;
         }
 
+        /* The container: limits line length for perfect reading flow */
         .container {
             max-width: 720px;
-            margin: 0 auto;
-            padding: 60px 20px 100px 20px;
+            padding: 100px 20px;
+            width: 100%;
         }
 
-        /* Language Switcher - Minimalist top right */
-        nav.language-switcher {
-            text-align: right;
-            margin-bottom: 60px;
-            font-size: 14px;
-            font-weight: 600;
-            letter-spacing: 0.05em;
-        }
-
-        nav.language-switcher a {
-            color: var(--text-main);
-            text-decoration: none;
-            margin-left: 10px;
-            padding-bottom: 2px;
-        }
-
-        nav.language-switcher a.active {
-            border-bottom: 2px solid var(--color-oxblood);
-            pointer-events: none;
-        }
-
-        /* Typography: Unapologetic and Bold */
-        header {
-            margin-bottom: 70px;
-        }
-
+        /* The title: physical weight and academic rigor */
         h1 {
-            font-size: 88px;
-            font-weight: 900;
-            letter-spacing: -0.03em;
-            margin-top: 0;
-            margin-bottom: 5px;
-            color: var(--text-main);
+            font-family: 'Libre Caslon Display', Garamond, 'Palatino Linotype', serif;
+            font-size: 64px;
+            font-weight: normal;
+            text-align: center;
+            letter-spacing: 2px;
+            margin: 0 0 15px 0;
         }
 
+        /* The claim: isolated and centered */
         .claim {
-            font-size: 26px;
-            font-weight: 700;
-            color: var(--color-tungsten);
-            margin-top: 0;
-            letter-spacing: -0.01em;
-        }
-
-        /* Menu Items / Sections */
-        section {
-            margin-bottom: 50px;
-        }
-
-        h2 {
+            text-align: center;
             font-size: 18px;
-            font-weight: 800;
-            color: var(--color-tungsten);
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            border-bottom: 3px solid var(--color-oxblood);
-            padding-bottom: 6px;
-            margin-bottom: 16px;
+            margin: 0 0 80px 0;
         }
 
-        p {
-            margin-top: 0;
-            margin-bottom: 0;
-            color: var(--text-main);
-            text-align: justify;
+        /* The text blocks: left-aligned, breathing through white space */
+        p.axiom {
+            text-align: left;
+            margin-bottom: 35px;
+            hyphens: auto;
+        }
+
+        p.axiom strong {
+            font-weight: 600;
         }
 
         a {
-            color: var(--text-main);
-            font-weight: 600;
+            color: #000000;
             text-decoration: underline;
-            text-decoration-thickness: 2px;
             text-underline-offset: 3px;
         }
 
         a:hover {
-            color: var(--color-oxblood);
+            text-decoration: none;
         }
 
-        /* Footer & Accordion (Collapse texts) */
-        footer {
-            margin-top: 80px;
+        /* The footer: contact */
+        .footer-contact {
+            text-align: center;
+            font-size: 14px;
+            margin-top: 100px;
+            margin-bottom: 40px;
         }
 
-        .contact-line {
-            font-size: 18px;
-            font-weight: 800;
-            color: var(--color-tungsten);
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            border-bottom: 3px solid var(--color-oxblood);
-            padding-bottom: 6px;
-            margin-bottom: 30px;
-        }
-
+        /* Expandable elements (Details/Summary) */
         details {
-            margin-bottom: 16px;
+            margin-bottom: 15px;
+            border-top: 1px solid #e0e0e0;
+            padding-top: 15px;
         }
 
         summary {
-            font-size: 18px;
-            font-weight: 800;
-            color: var(--color-tungsten);
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
+            font-size: 14px;
+            font-weight: 600;
             cursor: pointer;
-            list-style: none;
+            list-style: none; /* Removes the default arrow */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
 
+        /* Removes the default arrow in Safari/Webkit */
         summary::-webkit-details-marker {
             display: none;
         }
 
-        summary:hover {
-            color: var(--color-oxblood);
-        }
-
-        details p {
-            margin-top: 12px;
-            font-size: 15px;
-            color: var(--color-tungsten);
-            text-align: left;
+        /* The text inside the expandable area */
+        .details-content {
+            font-size: 14px;
+            margin-top: 10px;
+            color: #333333;
         }
     </style>
 </head>
@@ -161,57 +110,36 @@
 
     <div class="container">
         
-        <nav class="language-switcher">
-            <a href="index.html">D</a> | <a href="#" class="active">E</a>
-        </nav>
+        <h1>KYNAQ</h1>
+        <p class="claim">Because humans cannot imagine the unimaginable.</p>
 
-        <header>
-            <h1>KYNAQ</h1>
-            <p class="claim">Because humans cannot imagine the unimaginable.</p>
-        </header>
+        <p class="axiom"><strong>Statics.</strong> European infrastructure relies on passive steel, reacting only upon physical breach. This static asymmetry constitutes an incalculable risk. Chaotic reality demands an active, deterministic defence.</p>
 
-        <main>
-            <section>
-                <h2>CONTEXT</h2>
-                <p>The threat to critical infrastructure stems from the biological psychology of the aggressor—driven by motive, increasingly scaled by malignant AI agents. European facilities rely on passive steel, reacting only when the physical breach occurs. This static asymmetry constitutes an incalculable risk in a volatile world. Material reality demands deterministic anticipation.</p>
-            </section>
+        <p class="axiom"><strong>Origin.</strong> The architecture begins at absolute zero, discarding human heuristics. We construct a purely physical world model. The machine learns relentless kinetics, completely ignoring human assumptions.</p>
 
-            <section>
-                <h2>PREMISE</h2>
-                <p>Biology is infinitely complex, yet physics reveals its pure beauty through calculable axioms and laws. Kynaq utilizes this machine-readable predictability. Through uncompromising Deep Learning, we construct a high-dimensional world model of material architecture. The machine learns the pure physics of kinetics and entirely ignores human assumptions.</p>
-            </section>
+        <p class="axiom"><strong>Imperative.</strong> Algorithms do not operate in safe simulations. The mathematical objective function is strictly subordinated to absolute physical integrity. The kinetic countermeasure becomes a biological survival instinct.</p>
 
-            <section>
-                <h2>ARCHITECTURE</h2>
-                <p>Autonomous agents train within this world model through continuous self-play and contingent reinforcement learning. They simulate the adversary millions of times, calculating egress routes and discovering attack vectors beyond human imagination. Algorithms determine their own weights. The mathematical objective function strictly subordinates economic value to absolute physical integrity.</p>
-            </section>
+        <p class="axiom"><strong>Proof.</strong> We bridge the gap between code and reality through raw empirical friction. The intelligence dictates actual destruction tests on physical facilities. This generates the industry's first verified and unbreachable data monopoly.</p>
 
-            <section>
-                <h2>VALIDATION</h2>
-                <p>The greatest technological hurdle is the sim-to-real gap. We bridge this through raw empirical calibration: intelligence dictates real destruction tests at isolated facilities. The operational Kynaq AG operates strictly in stealth mode. Ongoing academic publications are released exclusively under "Projekt | Lab:2306 AG".</p>
-            </section>
+        <p class="axiom"><strong>Cadre.</strong> We recruit the absolute elite to breach the epistemological boundary between synthesis and irreversible physical destruction. Submit applications, including full repository access, directly to our research unit: <a href="mailto:talent@kynaq.ch">talent@kynaq.ch</a>.</p>
 
-            <section>
-                <h2>TALENT</h2>
-                <p>We recruit excellent developers for algorithmic post-training. The task is to overcome the epistemic boundary between simulation within the world model and irreversible, physical destruction in reality. If academically qualified, please send applications, including full repository access, directly to our research unit: <a href="mailto:talent@kynaq.ch">talent@kynaq.ch</a>.</p>
-            </section>
-        </main>
+        <div class="footer-contact">
+            Kynaq AG (in formation) | Kantonsstrasse 14 | CH-8807 Freienbach
+        </div>
 
-        <footer>
-            <div class="contact-line">
-                Kynaq AG (i.G.) | Kantonsstrasse 14 | CH-8807 Freienbach
+        <details>
+            <summary>Legal Notice <span>+</span></summary>
+            <div class="details-content">
+                Kynaq AG is legally in formation under Swiss corporate law. Registration in the Swiss Commercial Register is pending. All research results, algorithms, and proprietary data are subject to comprehensive copyright protection.
             </div>
+        </details>
 
-            <details>
-                <summary>Legal Notice +</summary>
-                <p>Kynaq AG is formally in the process of incorporation (i.G.). Registration in the Swiss Commercial Register has not yet been completed. All research results, algorithms, and proprietary data are subject to full copyright protection.</p>
-            </details>
-
-            <details>
-                <summary>Privacy Policy +</summary>
-                <p>This website serves exclusively to provide essential information. We radically abstain from tracking software, analytical tools, or marketing cookies. No personal data of visitors is collected or processed. Communication is subject to legal confidentiality.</p>
-            </details>
-        </footer>
+        <details>
+            <summary>Privacy Policy <span>+</span></summary>
+            <div class="details-content">
+                This website serves exclusively to provide essential information. We radically renounce the use of tracking software, analytics tools, or marketing cookies. No personal data of visitors is collected or processed. All communication is subject to absolute confidentiality.
+            </div>
+        </details>
 
     </div>
 
